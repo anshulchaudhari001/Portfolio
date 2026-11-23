@@ -6,7 +6,7 @@ import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#0c0d0e] text-zinc-100 selection:bg-zinc-800 selection:text-zinc-100">
+    <main className="min-h-screen bg-[#fafafa] dark:bg-[#090a0b] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
       <Navigation />
       <Hero />
       <Projects />
