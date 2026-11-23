@@ -1,21 +1,17 @@
 import { Navigation } from "@/components/Navigation";
-import { HeroTelemetry } from "@/components/HeroTelemetry";
-import { ArchitectureFlow } from "@/components/ArchitectureFlow";
-import { ProjectConsole } from "@/components/ProjectConsole";
-import { SystemMatrix } from "@/components/SystemMatrix";
-import { LiveTerminal } from "@/components/LiveTerminal";
-import { FooterConsole } from "@/components/FooterConsole";
+import { Hero } from "@/components/Hero";
+import { Projects } from "@/components/Projects";
+import { Skills } from "@/components/Skills";
+import { Contact } from "@/components/Contact";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-zinc-100 telemetry-grid">
+    <main className="min-h-screen bg-[#0c0d0e] text-zinc-100 selection:bg-zinc-800 selection:text-zinc-100">
       <Navigation />
-      <HeroTelemetry />
-      <ArchitectureFlow />
-      <ProjectConsole />
-      <SystemMatrix />
-      <LiveTerminal />
-      <FooterConsole />
+      <Hero />
+      <Projects />
+      <Skills />
+      <Contact />
     </main>
   );
 }
