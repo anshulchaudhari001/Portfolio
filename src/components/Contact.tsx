@@ -5,7 +5,7 @@ import { Mail, Code2, Globe, ArrowUpRight } from "lucide-react";
 
 export function Contact() {
   return (
-    <section className="py-20">
+    <section id="contact" className="py-20 scroll-mt-16">
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">Let&apos;s Connect</h2>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 max-w-xl leading-relaxed">

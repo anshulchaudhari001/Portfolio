@@ -26,7 +26,7 @@ export function Navigation() {
               Skills
             </a>
             <a
-              href="mailto:anshulchaudhari001@gmail.com"
+              href="#contact"
               className="rounded-md border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-900 px-3 py-1.5 text-xs font-medium text-zinc-800 dark:text-zinc-200 hover:border-zinc-400 dark:hover:border-zinc-500 hover:text-zinc-950 dark:hover:text-white transition-colors"
             >
               Contact
