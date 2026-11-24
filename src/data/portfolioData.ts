@@ -33,7 +33,8 @@ export const PERSONAL_INFO = {
   email: "anshulchaudhari97@gmail.com",
   phone: "+91-9579182784",
   github: "https://github.com/anshulchaudhari001",
-  linkedin: "https://www.linkedin.com/in/anshul-chaudhari-599187212/", // Placeholder or direct URL
+  linkedin: "https://www.linkedin.com/in/anshul-choudhari-aa1046230/",
+  resumeUrl: "https://drive.google.com/file/d/1Mu9XSt2vcSVRoRnCTHsoeEGkjhKgaX9c/view?usp=sharing",
   summary:
     "Full Stack Developer with 1+ year of professional experience building responsive user interfaces, modular reusable components, and API-integrated features. Experienced across React.js, Node.js, Express.js, MongoDB, Three.js 3D web engineering, and Spring Boot.",
 };
@@ -99,7 +100,8 @@ export const PROJECTS: Project[] = [
       "Fully responsive layout optimized for mobile touch gestures and desktop controls",
     ],
     techStack: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP", "WebGL"],
-    githubUrl: "https://github.com/anshulchaudhari001",
+    githubUrl: "https://github.com/anshulchaudhari001/Flyora-Aerospace",
+    liveUrl: "https://anshulchaudhari001.github.io/Flyora-Aerospace/",
   },
 ];
 
