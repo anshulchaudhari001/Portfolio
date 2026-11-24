@@ -41,7 +41,7 @@ export function Hero() {
             <span>GitHub Profile</span>
           </a>
           <a
-            href="mailto:anshulchaudhari001@gmail.com"
+            href="#contact"
             className="inline-flex items-center space-x-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 px-4 py-2.5 text-sm text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-700 hover:text-zinc-950 dark:hover:text-white transition-colors"
           >
             <Mail className="h-4 w-4" />
