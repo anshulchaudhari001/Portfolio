@@ -10,7 +10,7 @@ export function Projects() {
       <div className="mx-auto max-w-4xl px-6">
         <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">Featured Projects</h2>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          A selection of projects where I tackled real architectural trade-offs, state management, and database performance.
+          Full-stack applications and interactive web experiences showcasing frontend engineering, API integration, and database design.
         </p>
 
         <div className="mt-10 space-y-10">
@@ -23,7 +23,8 @@ export function Projects() {
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
                   <h3 className="text-xl font-bold text-zinc-900 dark:text-white tracking-tight">{project.title}</h3>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">{project.description}</p>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">{project.tagline}</p>
+                  <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed">{project.description}</p>
                 </div>
 
                 <div className="flex items-center space-x-3 text-xs">
@@ -55,15 +56,15 @@ export function Projects() {
               {/* The "Why" / Problem Solved */}
               <div className="mt-5 rounded-lg border border-zinc-200 dark:border-zinc-800/80 bg-zinc-50 dark:bg-zinc-950/60 p-4">
                 <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                  The Problem Solved
+                  Key Challenge Solved
                 </span>
                 <p className="mt-1 text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed">{project.problemSolved}</p>
               </div>
 
-              {/* Architectural Highlights */}
+              {/* Technical Highlights */}
               <div className="mt-5">
                 <span className="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400">
-                  Technical Architecture
+                  Architecture & Implementation
                 </span>
                 <ul className="mt-2 space-y-1.5">
                   {project.architectureHighlights.map((item, i) => (

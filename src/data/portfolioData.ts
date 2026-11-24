@@ -1,5 +1,6 @@
 export interface Project {
   title: string;
+  tagline: string;
   description: string;
   problemSolved: string;
   architectureHighlights: string[];
@@ -11,72 +12,122 @@ export interface Project {
 export interface Experience {
   role: string;
   company: string;
+  location: string;
   period: string;
-  description: string[];
+  type: string;
+  tools: string[];
+  bullets: string[];
 }
+
+export interface Education {
+  degree: string;
+  institution: string;
+  location: string;
+  year: string;
+  score: string;
+}
+
+export const PERSONAL_INFO = {
+  name: "Anshul Choudhari",
+  role: "Full Stack Developer",
+  email: "anshulchaudhari97@gmail.com",
+  phone: "+91-9579182784",
+  github: "https://github.com/anshulchaudhari001",
+  linkedin: "https://www.linkedin.com/in/anshul-chaudhari-599187212/", // Placeholder or direct URL
+  summary:
+    "Full Stack Developer with 1+ year of professional experience building responsive user interfaces, modular reusable components, and API-integrated features. Experienced across React.js, Node.js, Express.js, MongoDB, Three.js 3D web engineering, and Spring Boot.",
+};
+
+export const EXPERIENCES: Experience[] = [
+  {
+    role: "React.js Developer",
+    company: "Arrastur Innovations Pvt Ltd",
+    location: "Nagpur, India",
+    period: "July 2025 – July 2026",
+    type: "Full-time",
+    tools: ["React.js", "JavaScript", "REST APIs", "CRUD Operations", "Component Architecture"],
+    bullets: [
+      "Designed and developed responsive user interfaces using modular React.js components and clean state management.",
+      "Integrated React client screens with backend RESTful APIs for real-time CRUD workflows and client specifications.",
+      "Conducted thorough testing, code reviews, and frontend performance optimizations before production releases.",
+      "Collaborated closely with cross-functional software teams to deliver scalable product features on time.",
+    ],
+  },
+  {
+    role: "Networking Intern",
+    company: "MSIT Services",
+    location: "Nagpur, India",
+    period: "March 2023 – April 2023",
+    type: "Internship",
+    tools: ["VLAN", "Firewall Configuration", "Network Security", "Switching"],
+    bullets: [
+      "Deployed VLANs across 12 physical network switches to isolate network traffic and bolster internal security posture.",
+      "Configured and verified firewall policies to enforce strict, secure remote access controls adhering to company security standards.",
+    ],
+  },
+];
 
 export const PROJECTS: Project[] = [
   {
-    title: "ApexFlow — Real-time Event Processor",
+    title: "Developer Productivity Dashboard",
+    tagline: "Full-stack analytics & session management dashboard",
     description:
-      "A high-throughput event ingestion pipeline built to handle high write volumes without blocking HTTP clients.",
+      "A centralized developer workspace featuring task tracking, focus sessions, and real-time GitHub activity analytics.",
     problemSolved:
-      "Direct database writes under high concurrent traffic caused connection starvation and write locks. I decoupled the ingestion layer using Redis as a write buffer and background queue workers.",
+      "Context switching across developer tooling harms daily output. Unified task management, session tracking, and GitHub metrics into a single responsive dashboard with live data visualizations.",
     architectureHighlights: [
-      "API returns 202 Accepted immediately, pushing payloads into an in-memory queue",
-      "Worker process consumes batches every 500ms and performs bulk inserts into PostgreSQL",
-      "Redis sliding-window rate limiter prevents abuse per IP address",
+      "Node.js & Express RESTful API backend handling session data and task states",
+      "MongoDB database modeling for scalable user session tracking and history",
+      "Integrated GitHub REST API to fetch and visualize commit activity with Recharts",
+      "Responsive client engineered with Vite, React, and Tailwind CSS",
     ],
-    techStack: ["Next.js", "TypeScript", "Node.js", "Redis", "PostgreSQL", "Docker"],
+    techStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "Vite", "GitHub API", "Recharts"],
     githubUrl: "https://github.com/anshulchaudhari001",
-    liveUrl: "https://apexflow-demo.vercel.app",
+    liveUrl: "https://github.com/anshulchaudhari001",
   },
   {
-    title: "CloudVault — Multi-Tenant SaaS Workspace",
+    title: "Flyora Aerospace — 3D Web Experience",
+    tagline: "Interactive 3D web application with smooth hardware-accelerated animations",
     description:
-      "A full-stack collaborative application featuring workspace management, role-based access control (RBAC), and transactional billing.",
+      "An interactive aerospace website combining WebGL 3D rendering with fluid animations to showcase aeronautical models.",
     problemSolved:
-      "Ensuring strict data isolation between tenants while keeping queries simple. Implemented PostgreSQL Row-Level Security (RLS) to enforce tenant separation at the database layer.",
+      "Rendering 3D models on the web often causes frame drops on lower-powered devices. Optimized Three.js polygon counts, geometry caching, and lighting shaders while managing smooth scroll animations via GSAP.",
     architectureHighlights: [
-      "Row-Level Security (RLS) policies prevent cross-tenant data leaks",
-      "Stateless JWT sessions backed by Redis cache for instant permission revocation",
-      "Webhook receiver for Stripe billing with idempotency keys to prevent duplicate charges",
+      "Three.js canvas integration for interactive 3D model manipulation and camera views",
+      "GSAP timeline animations for scroll-triggered micro-interactions",
+      "Custom contact form built with client-side input validation and error feedback",
+      "Fully responsive layout optimized for mobile touch gestures and desktop controls",
     ],
-    techStack: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Prisma", "PostgreSQL"],
-    githubUrl: "https://github.com/anshulchaudhari001",
-    liveUrl: "https://cloudvault-demo.vercel.app",
-  },
-  {
-    title: "SyncPulse — Collaborative Real-Time Editor",
-    description:
-      "A lightweight collaborative workspace supporting multi-user presence, shared document cursors, and concurrent edits.",
-    problemSolved:
-      "Resolved socket message storms and state collisions when multiple users edit simultaneously using operational transformation concepts and Redis Pub/Sub.",
-    architectureHighlights: [
-      "WebSocket server horizontally scalable via Redis Pub/Sub channel adapters",
-      "Optimistic client-side updates with conflict resolution on the server",
-      "Heartbeat ping/pong mechanism to automatically clean up orphaned client connections",
-    ],
-    techStack: ["TypeScript", "WebSockets", "Node.js", "Redis Pub/Sub", "React"],
+    techStack: ["HTML5", "CSS3", "JavaScript", "Three.js", "GSAP", "WebGL"],
     githubUrl: "https://github.com/anshulchaudhari001",
   },
 ];
 
-export const SKILLS_DATA = [
+export const SKILLS_CATEGORIES = [
   {
-    category: "Backend & Systems",
-    skills: ["Node.js", "Express", "RESTful APIs", "JWT Auth & RBAC", "WebSockets", "Rate Limiting", "Zod Validation"],
+    category: "Frontend Development",
+    skills: ["React.js", "JavaScript (ES6+)", "Three.js", "HTML5 & CSS3", "Tailwind CSS", "Bootstrap", "GSAP", "Recharts", "Vite", "Webpack"],
   },
   {
-    category: "Databases & Storage",
-    skills: ["PostgreSQL", "Redis (Caching & Pub/Sub)", "Prisma ORM", "Schema Migrations", "B-Tree Indexing", "MongoDB"],
+    category: "Backend & APIs",
+    skills: ["Node.js", "Express.js", "REST API Design", "Spring Boot", "Core Java", "JSP & Servlets", "GitHub API"],
   },
   {
-    category: "Frontend",
-    skills: ["React", "Next.js (App Router)", "TypeScript", "Tailwind CSS", "HTML5 & Semantic Web", "State Management"],
+    category: "Databases & Core CS",
+    skills: ["MongoDB", "MongoDB Atlas", "SQL", "OOPs Concepts", "Multithreading", "Exception Handling", "Collections Framework", "C / C++"],
   },
   {
-    category: "DevOps & Tools",
-    skills: ["Docker", "Git & GitHub Actions (CI/CD)", "Linux / Bash", "Postman", "Vercel / Cloudflare"],
+    category: "Testing & DevOps Tools",
+    skills: ["Git & GitHub", "GitHub Actions (CI/CD)", "Docker", "Postman (API Testing)", "Jest", "Vercel", "Render", "Performance Optimization"],
+  },
+];
+
+export const EDUCATION_DATA: Education[] = [
+  {
+    degree: "Bachelor of Technology (B.Tech) — Information Technology",
+    institution: "Priyadarshini Bhagwati College of Engineering",
+    location: "Nagpur, India",
+    year: "Graduated: 2025",
+    score: "CGPA: 7.02 / 10",
   },
 ];

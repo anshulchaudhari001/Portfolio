@@ -1,19 +1,19 @@
 "use client";
 
 import React from "react";
-import { SKILLS_DATA } from "@/data/portfolioData";
+import { SKILLS_CATEGORIES } from "@/data/portfolioData";
 
 export function Skills() {
   return (
     <section id="skills" className="py-20 border-b border-zinc-200 dark:border-zinc-800/60">
       <div className="mx-auto max-w-4xl px-6">
-        <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">Skills & Technologies</h2>
+        <h2 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-white">Technical Skills</h2>
         <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-          Tools, languages, and frameworks I use on a regular basis in full-stack development.
+          Core languages, frameworks, libraries, and tools I use across frontend, backend, and DevOps.
         </p>
 
         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6">
-          {SKILLS_DATA.map((cat, idx) => (
+          {SKILLS_CATEGORIES.map((cat, idx) => (
             <div
               key={idx}
               className="rounded-xl border border-zinc-200 dark:border-zinc-800/80 bg-white dark:bg-zinc-900/40 p-6 shadow-sm dark:shadow-none"

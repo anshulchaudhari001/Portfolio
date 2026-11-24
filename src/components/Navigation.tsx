@@ -11,13 +11,16 @@ export function Navigation() {
           href="#"
           className="font-semibold text-zinc-900 dark:text-zinc-100 hover:text-zinc-600 dark:hover:text-white transition-colors tracking-tight"
         >
-          Anshul Chaudhari
+          Anshul Choudhari
         </a>
 
         <div className="flex items-center space-x-6">
           <nav className="flex items-center space-x-5 text-sm text-zinc-600 dark:text-zinc-400">
             <a href="#about" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
               About
+            </a>
+            <a href="#experience" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
+              Experience
             </a>
             <a href="#projects" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">
               Projects
