@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   title: "Anshul Chaudhari | Full-Stack Software Engineer",
   description:
     "Personal portfolio of Anshul Chaudhari, showcasing full-stack web applications, system design, and database engineering.",
+  icons: {
+    icon: "/letter-a.png",
+    shortcut: "/letter-a.png",
+    apple: "/letter-a.png",
+  },
 };
 
 export default function RootLayout({
