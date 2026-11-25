@@ -130,6 +130,6 @@ export const EDUCATION_DATA: Education[] = [
     institution: "Priyadarshini Bhagwati College of Engineering",
     location: "Nagpur, India",
     year: "Graduated: 2025",
-    score: "CGPA: 7.02 / 10",
+    score: "CGPA: 7.05 / 10",
   },
 ];

@@ -96,7 +96,7 @@ export function Contact() {
 
         <div className="mt-16 pt-8 border-t border-zinc-200 dark:border-zinc-900 text-xs text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-2">
           <span>&copy; 2026 {PERSONAL_INFO.name}. All rights reserved.</span>
-          <span>Full Stack Developer &bull; Nagpur, India</span>
+          <span>Full Stack Developer &bull; Pune, India</span>
         </div>
       </div>
     </section>
